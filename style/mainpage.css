@@ -4,8 +4,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 * {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin-right: 10px;
   margin-left: 10px;
   margin-right: auto;
@@ -23,37 +24,18 @@ body {
   border-radius: 30px 30px 0px 0px;
   display: flex;
 }
-.container .hamburger {
-  margin-right: 30px;
-  margin: 10px;
-  border-color: #CDBD79;
-}
-.container .hamburger .btn_icon {
-  background-image: url(hamburger-lg-svgrepo-com.png);
-}
-.container li {
-  border: solid #CDBD79 1px;
-  padding: 0px 20px;
-  margin: 10px 10px 10px 0px;
-  text-align: center;
-  border-radius: 30px;
-}
-.container li:hover {
-  background: #e9d992;
-}
 
 .header-container {
   width: 100%;
   position: sticky;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin-top: 0px;
   border-radius: 0px 0px 30px 30px;
   text-align: center;
+  font-family: 'Comforter&displa';
   background: linear-gradient(180deg, #FFF7DD 0%, #F1FFFB 100%);
 }
-.header-container img {
-  width: 50%;
-}
+
 .header-container a {
   text-decoration: none;
 }
@@ -63,70 +45,38 @@ body {
      object-fit: contain;
   opacity: 0.6;
 }
-.header-container .footer-img {
-  display: table;
-  margin: 0;
-  padding: 0;
-  vertical-align: bottom;
-}
-.header-container .inventing-text {
-  max-width: 680px;
-  max-height: 64px;
-  font-family: "Playfair", serif;
-  color: black;
-  margin-top: 3em;
-  font-size: calc(17px + 0.8333333333vw);
-}
-.header-container .article-text {
-  display: flexbox;
-  flex-direction: column;
-  max-width: 1000px;
-  line-height: 20px;
-}
-.header-container .article-text .article {
-  margin-top: 70px;
-  font-family: "Playfair", serif;
-}
-.header-container .article-text .article::after {
-  content: "";
-  display: block;
-  max-width: 670px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 1px;
-  background: black;
-}
-.header-container .article-text .our-party {
-  display: flexbox;
-  flex-direction: row;
-  max-width: 700px;
-}
-.header-container .article-text .our-party .photo-place {
-  max-width: 400px;
-  max-height: 220px;
-  border-radius: 30px;
+
+.inventing-text {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .main_page {
   display: flex;
-  max-height: 50em;
+  max-width: fit-content;
+  /* margin: 3% 5% 3%; */
+  font-family: 'Playfair';
 }
 
-img {
-  object-fit: contain;
-  width: auto;
+.img-fluid {
+  object-fit: contain; 
+  max-width: 100%;
   height: auto;
   align-items: center;
-  /* width: 100%;
-  height: 100%; */ */
   margin-left: 1%;
-  border-radius: 3%;
+  border-radius: 3% 3% 3% 25%;
 }
 
-.lengh{
-  max-width: 30%;
-  text-align: center;
+
+
+
+input {
+  min-width: auto;
+  font-size: small;
 }
+
 .preloader {
   position: fixed;
   left: 0;
@@ -188,40 +138,3 @@ img {
 .loaded .preloader {
   display: none;
 }
-
-.timer {
-  display: flex;
-  max-width: 500px;
-  margin-bottom: 50px;
-  padding-top: 30px;
-  border: solid #FFE1BE 1px;
-  border-radius: 20px;
-  background-color: #FFF7DD;
-}
-.timer .timer__items {
-  display: flex;
-  font-size: 38px;
-  margin-bottom: 10px;
-}
-.timer .timer__item {
-  position: relative;
-  min-width: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 35px;
-  text-align: center;
-}
-.timer .timer__item::before {
-  content: attr(data-title);
-  margin-left: 10px;
-  margin-top: 10px;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  font-size: 14px;
-}
-.timer .timer__item:not(:last-child)::after {
-  content: ":";
-  position: absolute;
-  right: -5px;
-}/*# sourceMappingURL=mainpage.css.map */

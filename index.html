@@ -7,10 +7,10 @@
     <meta name="keywords" content="расчет траектории инструмента при точении фаски"> 
     <meta name="author" content="Dmitiy A.">
     <meta name="copyright" content="Dmitriy A.">
-    <link rel="icon" href="style/img/rings.png" type="image/x-icon">
+    <link rel="icon" href="style/gun.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style/mainpage.css">
-    <script src="style/script.js"></script>
+    <script src="style/math.js"></script>
     <title>фASSочка</title>
 </head>
 
@@ -54,22 +54,50 @@
       </div>
 
       <div class="main_page">
-      <img src="style/image.jpg" class="image" alt="image">
-        <div class="meetdata" style="font-size: medium;">
-            <p>L - Длина фаски (мм)</p>
-            <p><input type="number" class="lengh"></p>
-            <p>α - Угол фаски (дес.граусы)</p>
-            <p><input type="number" class="lengh"></p>
-            <p>Z - Начало фаски по оси Z</p>
-            <p><input type="number" class="lengh"></p>
-            <p>D - Наружный диаметр (мм) </p>
-            <p><input type="number" class="lengh"></p>
-            <p>C - Безопасное растояние (мм)</p>
-            <p><input type="number" class="lengh"></p>
-            <p>R - Радиус режушей кромки </p>
-            <p><input type="number" class="lengh"></p>
+        <div class="shema">
+          <img src="style/image.jpg" class="img-fluid .image" alt="image">
         </div>
 
+        <div class="lengh" style="font-size: auto;">
+            <p><input type="number" id="l" class="lengh-L" placeholder="Длина фаски (мм)"></p>
+            <p><input type="number" id="a" class="lengh-a" placeholder="α - Угол фаски (дес.граусы)"></p>
+            <p><input type="number" id="z" class="lengh-Z" placeholder="Z - Начало фаски по оси Z"></p>
+            <p><input type="number" id="d" class="lengh-D" placeholder="D - Наружный диаметр (мм)"></p>
+            <p><input type="number" id="c" class="lengh-C" placeholder="C - Безопасное растояние (мм)"></p>
+            <p><input type="number" id="r" class="lengh-R" placeholder="R - Радиус режушей кромки"></p>
+
+            <!-- Кнопка-триггер модального окна -->
+<button onClick="raschitat()" type="button" class="btn btn-primary" data-bs-toggle="modal" style="margin-top: 3%;" data-bs-target="#staticBackdrop">
+  посчитать
+</button>
+
+<!-- Модальное окно -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" style="align-items: center;" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">расчет</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        <p id="XA">xa-X координата точки "A"</p>
+        <p id="ZA">za-Z координата точки "A"</p> 
+        <p id="XB">xb-X координата точки "b"</p> 
+        <p id="ZB">zb-Z координата точки "b"</p> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">понял</button>
+        <!-- <button type="button" class="btn btn-primary">Понял</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+            <button type="button" class="btn btn-outline-danger" style=" margin-top: 3%">сбросить значения</button>
+            
+
+          </div>
+      
       </div>
 
     </header>
